@@ -15,6 +15,7 @@
           <element id="module-output" name="program" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.oracle.database.jdbc:ojdbc8:21.5.0.0" />
           <element id="library" level="project" name="Maven: com.github.mdre:flowsubwindow:1.0.5.4" />
           <element id="library" level="project" name="Maven: com.vaadin.componentfactory:multiple-select:1.1.1" />
           <element id="library" level="project" name="Maven: com.flowingcode.vaadin.addons:orgchart-addon:4.2.1" />
@@ -219,7 +220,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.6" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.4.6" />
           <element id="library" level="project" name="Maven: javax.el:javax.el-api:3.0.0" />
-          <element id="library" level="project" name="Maven: org.glassfish:javax.el:3.0.0" />
           <element id="library" level="project" name="Maven: org.jetbrains:annotations:23.0.0" />
         </element>
       </element>

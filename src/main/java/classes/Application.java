@@ -11,7 +11,7 @@ import org.vaadin.artur.helpers.LaunchUtil;
  *
  * application runner class
  */
-@SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class, SecurityAutoConfiguration.class, DataSourceAutoConfiguration.class })
+@SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class, SecurityAutoConfiguration.class})
 public class Application{
 
 
