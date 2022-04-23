@@ -21,6 +21,7 @@ public class Repulojaratok {
     Date erkezes;
     String honnan;
     String hova;
+    Boolean etkezes;
 
     @ManyToOne
     @JoinColumn(name = "legitarsasag_id")
@@ -29,6 +30,20 @@ public class Repulojaratok {
     List<Repulok> repulok;
     @OneToMany(mappedBy = "repulojaratok")
     List<Jegy> jegy;
+
+    public String getLegitarsasagNev(){
+        return this.getLegitarsasag().nev;
+    }
+
+    public Integer getFoglalasSzam(){
+        Integer foglalasSzam = 0;
+        for (Jegy j : this.jegy){
+            if (j.foglalt){
+                foglalasSzam++;
+            }
+        }
+        return foglalasSzam;
+    }
 
 
 }

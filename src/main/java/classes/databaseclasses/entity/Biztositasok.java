@@ -23,4 +23,8 @@ public class Biztositasok {
     @ManyToOne
     @JoinColumn(name = "utasok_id")
     Utasok utasok;
+
+    public String biztositoNev(){
+        return this.biztositok.nev;
+    }
 }

@@ -18,6 +18,7 @@ public class Utasok {
     Integer id;
     String nev;
     Date szuletesiDatum;
+    Boolean gyerek;
 
     @OneToMany(mappedBy = "utasok")
     List<Biztositasok> biztositasok;

@@ -17,6 +17,9 @@ public class Jegy {
     Integer id;
     Integer ar;
     Date datum;
+    Integer sor;
+    Integer szek;
+    Boolean foglalt;
 
     @ManyToOne
     @JoinColumn(name = "utasok_id")
