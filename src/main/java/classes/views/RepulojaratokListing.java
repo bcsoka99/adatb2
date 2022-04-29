@@ -26,7 +26,7 @@ public class RepulojaratokListing extends VerticalLayout {
         repulojaratokGrid.addColumn(Repulojaratok::getHova).setHeader("hova");
         repulojaratokGrid.addColumn(Repulojaratok::getIndulas).setHeader("indulas");
         repulojaratokGrid.addColumn(Repulojaratok::getErkezes).setHeader("erkezes");
-        repulojaratokGrid.addColumn(Repulojaratok::getLegitarsasagNev).setHeader("legitarsasag");
+        repulojaratokGrid.addColumn(Repulojaratok::legitarsasagNev).setHeader("legitarsasag");
     }
 
     @PostConstruct

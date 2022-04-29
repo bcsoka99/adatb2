@@ -16,10 +16,12 @@ import java.util.Collection;
 public class RepuloTipusokList extends VerticalLayout {
     @Autowired
     RepulokRepository repulokRepository;
+
     Grid<Repulok> repulokGrid;
 
     public RepuloTipusokList(){
         add(new Menu());
+        add(repulokGrid = new Grid());
         repulokGrid.addColumn(Repulok::getTipus).setHeader("tipus");
         repulokGrid.addColumn(Repulok::getFerohely).setHeader("ferohely");
     }

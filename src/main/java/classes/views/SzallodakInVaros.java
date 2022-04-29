@@ -10,8 +10,6 @@ import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.List;
 
 @PageTitle("szallodak")
 @Route(value = "szallodak")
@@ -36,14 +34,15 @@ public class SzallodakInVaros extends VerticalLayout {
 
     @PostConstruct
     void init(){
-        List<Szallodak> szallodakList = (List<Szallodak>) szallodakRepository.findAll();
+        /*List<Szallodak> szallodakList = (List<Szallodak>) szallodakRepository.findAll();
         List<String> arrayList = new ArrayList<>();
         for (Szallodak sz : szallodakList){
             if (!arrayList.contains(sz.getTelepules())){
                 arrayList.add(sz.getTelepules());
             }
         }
-        varosok.setItems(arrayList);
+        varosok.setItems(arrayList);*/
+        varosok.setItems(szallodakRepository.findAllTelepules());
     }
 
     private void fillInGrid(String varos){

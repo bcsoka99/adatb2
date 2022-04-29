@@ -3,7 +3,7 @@ package classes.views;
 import classes.databaseclasses.entity.Legitarsasag;
 import classes.databaseclasses.repository.LegitarsasagRepository;
 import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.Collection;
 
 @PageTitle("osszes legitarsasag")
 @Route(value = "legitarsasagokList")
-public class LegitarsasagokListing extends HorizontalLayout {
+public class LegitarsasagokListing extends VerticalLayout {
     @Autowired
     LegitarsasagRepository legitarsasagRepository;
 
@@ -22,7 +22,7 @@ public class LegitarsasagokListing extends HorizontalLayout {
     public LegitarsasagokListing(){
         add(new Menu());
         add(legitarsasagGrid = new Grid<>());
-        legitarsasagGrid.addColumn(Legitarsasag::getNev);
+        legitarsasagGrid.addColumn(Legitarsasag::getNev).setHeader("name");
     }
 
     @PostConstruct

@@ -26,7 +26,7 @@ public class Legnepszerubb extends VerticalLayout {
         repulojaratokGrid.addColumn(Repulojaratok::getIndulas).setHeader("indulas");
         repulojaratokGrid.addColumn(Repulojaratok::getHonnan).setHeader("honnan");
         repulojaratokGrid.addColumn(Repulojaratok::getHova).setHeader("hova");
-        repulojaratokGrid.addColumn(Repulojaratok::getFoglalasSzam).setHeader("foglalt jegyek szama");
+        repulojaratokGrid.addColumn(Repulojaratok::foglalasSzam).setHeader("foglalt jegyek szama");
     }
 
     @PostConstruct

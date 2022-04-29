@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.joda.time.DateTime;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -31,15 +32,21 @@ public class Repulojaratok {
     @OneToMany(mappedBy = "repulojaratok")
     List<Jegy> jegy;
 
-    public String getLegitarsasagNev(){
+    public String legitarsasagNev(){
         return this.getLegitarsasag().nev;
     }
 
-    public Integer getFoglalasSzam(){
+    public Integer foglalasSzam(){
+        System.err.println("foglalasba bement");
         Integer foglalasSzam = 0;
+        if (jegy == null || jegy.isEmpty()){
+            System.err.println("jegy null vagy ures");
+            return 0;
+        }
         for (Jegy j : this.jegy){
             if (j.foglalt){
                 foglalasSzam++;
+                System.err.println("+ jegy");
             }
         }
         return foglalasSzam;
