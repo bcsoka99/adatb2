@@ -28,4 +28,9 @@ public class Jegy {
     @JoinColumn(name = "repulojaratok_id")
     Repulojaratok repulojaratok;
 
+
+    public String repulojarat(){
+        return repulojaratok.toString();
+    }
+
 }

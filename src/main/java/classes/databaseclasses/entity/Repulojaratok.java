@@ -3,8 +3,6 @@ package classes.databaseclasses.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.joda.time.DateTime;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -37,20 +35,23 @@ public class Repulojaratok {
     }
 
     public Integer foglalasSzam(){
-        System.err.println("foglalasba bement");
         Integer foglalasSzam = 0;
         if (jegy == null || jegy.isEmpty()){
-            System.err.println("jegy null vagy ures");
             return 0;
         }
         for (Jegy j : this.jegy){
             if (j.foglalt){
                 foglalasSzam++;
-                System.err.println("+ jegy");
             }
         }
         return foglalasSzam;
     }
 
-
+    @Override
+    public String toString() {
+        return
+                "indulas=" + honnan +" "+ indulas +
+                ", erkezes=" +hova+ " "+ erkezes
+                ;
+    }
 }

@@ -35,9 +35,9 @@ public class RepulojegyCsere extends VerticalLayout {
     public RepulojegyCsere(){
         add(new Menu());
         add(utasok = new ComboBox<>("utasok"));
-        utasok.setReadOnly(true);
+        utasok.setReadOnly(false);
         add(regiJegyek = new Grid<>());
-        regiJegyek.addColumn(Jegy::getRepulojaratok).setHeader("repulojarat");
+        regiJegyek.addColumn(Jegy::repulojarat).setHeader("repulojarat");
         regiJegyek.addColumn(Jegy::getSor).setHeader("sor");
         regiJegyek.addColumn(Jegy::getSzek).setHeader("szek");
         add(ujJegyek = new Grid<>());

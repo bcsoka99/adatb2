@@ -33,18 +33,21 @@ public class YearlyStatement extends VerticalLayout {
         add(summa = new TextField("vegosszeg"));
         summa.setReadOnly(true);
 
-        beforeDate.addValueChangeListener(change -> setSumma());
-        afterDate.addValueChangeListener(change -> setSumma());
+        beforeDate.addValueChangeListener(change -> resetAfter());
+        afterDate.addValueChangeListener(change -> setSumma(change.getValue()));
     }
 
-    private void setSumma(){
+
+    private void setSumma(LocalDate after){
         Double osszeg = 0.00;
         LocalDate before = beforeDate.getValue();
-        LocalDate after = afterDate.getValue();
         List<Repulojaratok> repulojaratokList = (List<Repulojaratok>) repulojaratokRepository.findAll();
         List<Repulojaratok> filteredList = new ArrayList<>();
         for (Repulojaratok r : repulojaratokList){
-            if (r.getIndulas().after(Converter.convertToDateViaInstant(before)) &&
+            if (
+                    before != null &&
+                    after != null &&
+                    r.getIndulas().after(Converter.convertToDateViaInstant(before)) &&
                     r.getErkezes().after(Converter.convertToDateViaInstant(before)) &&
                     r.getIndulas().before(Converter.convertToDateViaInstant(after)) &&
                     r.getErkezes().before(Converter.convertToDateViaInstant(after))){
@@ -53,7 +56,7 @@ public class YearlyStatement extends VerticalLayout {
         }
         for (Repulojaratok r : filteredList){
             for (Jegy j : r.getJegy()){
-                if (!j.getFoglalt()){
+                if (j.getFoglalt()){
                     if (j.getUtasok().getGyerek()){
                         osszeg += j.getAr()*0.7;
                     }else {
@@ -63,5 +66,9 @@ public class YearlyStatement extends VerticalLayout {
             }
         }
         summa.setValue(String.valueOf(osszeg));
+    }
+
+    private void resetAfter(){
+        afterDate = new DatePicker();
     }
 }
