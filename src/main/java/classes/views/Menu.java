@@ -19,9 +19,10 @@ public class Menu extends HorizontalLayout {
         MenuItem felsorolasok = menu.addItem("felsorolasok");
         MenuItem menetrend = menu.addItem("menetrend", event -> UI.getCurrent().navigate("menetrend"));
         MenuItem jegyfoglalas = menu.addItem("jegyfoglalas", event -> UI.getCurrent().navigate("jegyfoglalas"));
-        MenuItem repulojegyCsre = menu.addItem("repjegy csere", event -> UI.getCurrent().navigate("repulojegyCsere"));
+        MenuItem JegyFoglalasAtszallassal = menu.addItem("jegyfoglalas atszallassal", event -> UI.getCurrent().navigate("jegyfoglalasAtszallassal"));
+        MenuItem repulojegyCsere = menu.addItem("repjegy csere", event -> UI.getCurrent().navigate("repulojegyCsere"));
         MenuItem keresok = menu.addItem("keresok");
-        MenuItem kimutats = menu.addItem("kimutats", event -> UI.getCurrent().navigate("kimutatas"));
+        MenuItem kimutatas = menu.addItem("kimutats", event -> UI.getCurrent().navigate("kimutatas"));
         MenuItem biztositasok = menu.addItem("biztositasok szerkesztese", event -> UI.getCurrent().navigate("editBiztositasok"));
 
         SubMenu felsorolasokSubMenu = felsorolasok.getSubMenu();
