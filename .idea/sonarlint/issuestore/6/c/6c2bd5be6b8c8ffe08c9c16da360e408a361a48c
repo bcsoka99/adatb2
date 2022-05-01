@@ -1,0 +1,13 @@
+
+X
+java:S1128"BRemove this unused import 'classes.databaseclasses.entity.Utasok'.(òõÇñ
+f
+java:S1128"PRemove this unused import 'classes.databaseclasses.repository.UtasokRepository'.(šëáù
+V
+java:S1128"@Remove this unused import 'com.vaadin.flow.component.grid.Grid'.(²õÑÛ
+n
+java:S1128	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ
+Q
+java:S1128";Remove this unused import 'javax.annotation.PostConstruct'.(›ÅÁ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

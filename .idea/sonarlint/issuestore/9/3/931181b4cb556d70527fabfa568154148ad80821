@@ -1,0 +1,17 @@
+
+K
+java:S1948"0Make "jegyRepository" transient or serializable.(Í‰¯Òùÿÿÿÿ
+M
+java:S1948"2Make "utasokRepository" transient or serializable.(á±Êüÿÿÿÿ
+A
+java:S1948 "+Make "oldTicket" transient or serializable.(š­ü‹
+F
+java:S1948!"+Make "newTicket" transient or serializable.(™Ùâ¨ùÿÿÿÿ
+I
+java:S1121%".Extract the assignment out of this expression.(¦Øªáıÿÿÿÿ
+I
+java:S1121'".Extract the assignment out of this expression.(¼Ø×Šûÿÿÿÿ
+I
+java:S1121+".Extract the assignment out of this expression.(Á¸ÿøÿÿÿÿ
+D
+java:S1121.".Extract the assignment out of this expression.( ¾Ú
