@@ -51,3 +51,23 @@ a
 1src/main/java/classes/views/SzallodakInVaros.java,4\a\4adb7a208fde16541fb8b72478e729f513ecf99a
 D
 webpack.generated.js,0\7\0725f92d559988bfe68ff4e43985361ae851152e
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+`
+0src/main/java/classes/views/YearlyStatement.java,7\4\7453f5be950f8027e47578951c9f9730085b9124
+t
+Dsrc/main/java/classes/databaseclasses/repository/JegyRepository.java,d\c\dcaba84fd69e241f4f202246d18f2bee8da9873b
+f
+6src/main/java/classes/databaseclasses/entity/Jegy.java,c\6\c6770acc0127c9a5e9cc05854e690dfca8c895d1
+}
+Msrc/main/java/classes/databaseclasses/repository/RepulojaratokRepository.java,4\6\4647634f1080d20de4e66982a2641a050880a7c1
+i
+9src/main/java/classes/views/JegyFoglalasAtszallassal.java,5\d\5d6f70a93710cd2a45a4bd7ec6a08d9f2c458e0f
+v
+Fsrc/main/java/classes/databaseclasses/repository/UtasokRepository.java,8\8\8818481bca3ff718f681fe1d9ac6d020bf977867
+]
+-src/main/java/classes/views/Jegyfoglalas.java,0\2\026379dc26183ac0f2b6c8701f7249014e1584b7
+U
+%src/main/java/classes/views/Menu.java,b\9\b964902ed502e57f77eb3c90afb413e4b8f32850
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
